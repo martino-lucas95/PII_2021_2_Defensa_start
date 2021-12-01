@@ -1,0 +1,16 @@
+﻿[*.cs]
+
+# CS0659: Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
+dotnet_diagnostic.CS0659.severity = none
+
+# CS0661: Type defines operator == or operator != but does not override Object.GetHashCode()
+dotnet_diagnostic.CS0661.severity = none
+
+# CS0253: Possible unintended reference comparison; to get a value comparison, cast the right hand side to type 'Material'
+dotnet_diagnostic.CS0253.severity = none
+
+# CS0114: 'Material.Equals(object)' hides inherited member 'object.Equals(object?)'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword.
+dotnet_diagnostic.CS0114.severity = none
+
+# CS0660: The type 'Material' defines operator == or operator != but does not override Object.Equals(object o)
+dotnet_diagnostic.CS0660.severity = none
