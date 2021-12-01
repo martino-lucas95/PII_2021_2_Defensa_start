@@ -1,3 +1,4 @@
+using Internal;
 using System;
 using System.Text;
 using System.Collections.Generic;
@@ -32,6 +33,10 @@ namespace Ucu.Poo.Defense
         public void RemoveItem(PublicationItem item)
         {
             this.items.Remove(item);
+        }
+
+        public string AsText(PublicationItem quantity, PublicationItem price, Material name){
+            Console.WriteLine($" Cantidad: {quantity}\n| Precio: {price}\n| Nombre: {name}");
         }
     }
 }

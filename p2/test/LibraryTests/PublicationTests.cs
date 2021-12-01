@@ -47,7 +47,7 @@ namespace Ucu.Poo.Defense.Tests
             PublicationItem item2 = new PublicationItem(placa, 2, 2);
             publication.AddItem(item1);
             publication.AddItem(item2);
-            string text = publication.AsText();            
+            string text = publication.AsText(item1.Quantity, item1.Material.Name, item1.Price);            
 
             Assert.That(text, Contains.Substring(item1.Material.Name).IgnoreCase);
             Assert.That(text, Contains.Substring(item1.Quantity.ToString()));

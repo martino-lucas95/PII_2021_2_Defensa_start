@@ -11,5 +11,7 @@
             this.Name = name;
             this.IsDangerous = isDangerous;
         }
+
+        
     }
 }
