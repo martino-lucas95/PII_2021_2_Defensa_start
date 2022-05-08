@@ -33,5 +33,26 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+         public double TotalPrice()
+        {
+            double result = 0;
+
+            foreach (PublicationItem publication in this.items)
+            {
+                result += publication.SubTotalPrice();
+            }
+
+            return result;
+        }
+
+        public string AsText(){
+            string text = ($"Fecha {this.EndDate}:\n");
+            foreach (PublicationItem publication in this.items)
+            {
+                text += ($"{publication.Quantity} de {publication.Price} a $ {publication.SubTotalPrice()}\n");
+            }
+            text += ($"Costo Total: $ {TotalPrice()}");
+            return text;
+        }
     }
 }

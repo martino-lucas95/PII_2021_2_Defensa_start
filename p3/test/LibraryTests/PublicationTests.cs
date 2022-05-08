@@ -49,8 +49,7 @@ namespace Ucu.Poo.Defense.Tests
             publication.AddItem(item2);
             int expected = item1.Quantity * item1.Price + item2.Quantity * item2.Price;
 
-            // Assert.That(publication.Total, Is.EqualTo(expected));
-            Assert.IsTrue(true);
+            Assert.That(publication.TotalPrice, Is.EqualTo(expected));
         }
     }
 }
