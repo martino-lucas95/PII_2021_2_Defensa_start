@@ -1,4 +1,3 @@
-using Internal;
 using System;
 using System.Text;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ namespace Ucu.Poo.Defense
     public class Publication
     {
         public DateTime EndDate { get; set; }
+        private IList<PublicationItem> items = new List<PublicationItem>();
 
         public IReadOnlyCollection<PublicationItem> Items
         {
@@ -17,9 +17,6 @@ namespace Ucu.Poo.Defense
                 return new ReadOnlyCollection<PublicationItem>(this.items);
             }
         }
-
-        private IList<PublicationItem> items = new List<PublicationItem>();
-
         public Publication(DateTime endDate)
         {
             this.EndDate = endDate;
@@ -35,8 +32,10 @@ namespace Ucu.Poo.Defense
             this.items.Remove(item);
         }
 
-        public void AsText(PublicationItem quantity, PublicationItem price, Material name){
-            Console.WriteLine($" {quantity} de '{name}' a ${price} ");
+        public string AsText(PublicationItem item)
+        {
+            string text = $"{item.Quantity} de '{item.Material.Name}' a ${item.Price} ";
+            return text;
         }
     }
 }
