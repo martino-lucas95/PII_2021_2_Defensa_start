@@ -1,7 +1,9 @@
 using NUnit.Framework;
+using Ucu.Poo.Defense;
 
 namespace Ucu.Poo.Defense.Tests
 {
+    [TestFixture]
     public class MaterialTests
     {
         MaterialType dangerousType;

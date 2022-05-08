@@ -49,11 +49,11 @@ namespace Ucu.Poo.Defense.Tests
             publication.AddItem(item2);
             string text = publication.AsText(item1.Quantity, item1.Material.Name, item1.Price);            
 
-            Assert.That(text, Contains.Substring(item1.Material.Name).IgnoreCase);
             Assert.That(text, Contains.Substring(item1.Quantity.ToString()));
+            Assert.That(text, Contains.Substring(item1.Material.Name).IgnoreCase);
             Assert.That(text, Contains.Substring(item1.Price.ToString()));
-            Assert.That(text, Contains.Substring(item2.Material.Name).IgnoreCase);
             Assert.That(text, Contains.Substring(item2.Quantity.ToString()));
+            Assert.That(text, Contains.Substring(item2.Material.Name).IgnoreCase);
             Assert.That(text, Contains.Substring(item2.Price.ToString()));
         }
     }

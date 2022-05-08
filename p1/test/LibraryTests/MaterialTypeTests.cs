@@ -1,13 +1,11 @@
 using NUnit.Framework;
+using Ucu.Poo.Defense;
 
 namespace Ucu.Poo.Defense.Tests
 {
+    [TestFixture]
     public class MaterialTypeTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public void TestCreateNonDangerousMaterialType()

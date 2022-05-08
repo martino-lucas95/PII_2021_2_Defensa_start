@@ -35,8 +35,8 @@ namespace Ucu.Poo.Defense
             this.items.Remove(item);
         }
 
-        public string AsText(PublicationItem quantity, PublicationItem price, Material name){
-            Console.WriteLine($" Cantidad: {quantity}\n| Precio: {price}\n| Nombre: {name}");
+        public void AsText(PublicationItem quantity, PublicationItem price, Material name){
+            Console.WriteLine($" {quantity} de '{name}' a ${price} ");
         }
     }
 }

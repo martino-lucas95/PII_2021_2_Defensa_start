@@ -1,0 +1,6 @@
+{
+    // "csharp.unitTestDebuggingOptions": {
+    //     "enableStepFiltering": false
+    // }
+    "dotnet-test-explorer.testProjectPath": "**/*Library.Test.csproj"
+}
