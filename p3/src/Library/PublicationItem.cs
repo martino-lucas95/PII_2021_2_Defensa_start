@@ -15,8 +15,8 @@ namespace Ucu.Poo.Defense
             this.Price = price;
         }
 
-        public int TotalPrice(int quantity, int price){
-            int totalprice = this.Quantity*this.Price;
-        }
-    }
+    //     public int TotalPrice(int quantity, int price){
+    //         int totalprice = this.Quantity*this.Price;
+    //     }
+     }
 }
